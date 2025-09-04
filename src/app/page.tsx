@@ -1,6 +1,6 @@
 "use client";
 
-import GlassNavbar from "../components/GlassNavbar";
+import GlassNavbar from "@/components/Global/Navbar/GlassNavbar";
 
 export default function Home() {
   return (
