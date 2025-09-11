@@ -28,11 +28,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-black via-gray-900 to-black text-white`}
       >
-        {/* Floating Side Navbar */}
-        <GlassNavbar />
+        {/* Main wrapper */}
+        <div className="relative min-h-screen w-full">
+          {/* Floating Side Navbar */}
+          <aside className="fixed top-0 left-0 h-full w-[20%] md:w-[15%] sm:w-[60px] z-50">
+            <GlassNavbar />
+          </aside>
 
-        {/* Content sits behind, navbar overlays */}
-        {children}
+          {/* Page Content - Full width, responsive */}
+          <main className="min-h-screen w-full">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
