@@ -1,8 +1,9 @@
 "use client";
 
 import GlassNavbar from "@/app/navbar/SideNav";
+import HeroSection from "@/components/Homepage/HeroSection";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="relative min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white flex">
       {/* Sidebar Navbar */}
@@ -12,19 +13,8 @@ export default function Home() {
 
       {/* Main Content (shifted to right by navbar width) */}
       <div className="flex-1 ml-64">
-        {/* Hero Section */}
-        <section
-          id="home"
-          className="h-screen flex flex-col items-center justify-center text-center px-4"
-        >
-          <h1 className="text-5xl font-extrabold mb-6">
-            Welcome to My Portfolio
-          </h1>
-          <p className="text-lg max-w-2xl text-gray-300">
-            This site is built with Next.js, TailwindCSS, and will showcase
-            projects with stunning 3D glass effects.
-          </p>
-        </section>
+        {/* Hero Section (modular component) */}
+        <HeroSection />
 
         {/* About Section */}
         <section
